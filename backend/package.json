@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^1.41.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "mysql2": "^3.14.3",
+    "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7"
+  },
+  "type": "module"
+}

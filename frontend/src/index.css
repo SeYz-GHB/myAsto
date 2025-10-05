@@ -1,0 +1,315 @@
+
+@import "tailwindcss";
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+*{
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Apply Exo 2 to everything except headings, p, a, li */
+*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Use Orbitron */
+h1,h2,h3,h4,h6 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+
+.animatText {
+
+  background-image: linear-gradient(
+    90deg,
+    hsl(143, 7%, 52%) 0%,
+    #cfd3cf 33%,
+    #37d669, 
+    #59ca59 100%
+  );
+
+  background-size: 300% 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  color: transparent;
+  animation: RGB_TEXT 2s linear infinite;
+}
+
+@keyframes RGB_TEXT {
+  0%   { background-position:   0% 0; }
+  100%  { background-position: 100% 0; }
+  
+}
+
+/* Thin scrollbar for all elements with class .thin-scroll */
+.thin-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.thin-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb {
+  background-color: #0ab60a;
+  border-radius: 4px;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+.background_rgb {
+  background: linear-gradient(
+    90deg,
+    #ecf6eb 0%,
+    #00ff00 33%,
+    #e6ece7 66%,
+    #00ff00 100%
+  );
+  background-size: 300% 100%;
+  animation: RGB_TEXT 3s linear infinite;
+}
+
+
+@keyframes rgbFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(120deg, rgb(180, 226, 180), rgb(236, 240, 237), rgb(157, 219, 157));
+  background-size: 150% 150%;
+  animation: rgbFlow 2s linear infinite;
+}
+
+@keyframes LogoRun {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.logoRun {
+  animation: LogoRun 20s linear infinite;
+}
+
+
+/* Firefox */
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #1fdc71 transparent; /* thumb / track */
+}
+
+/* Chrome / Edge / Safari */
+.thin-scrollbar::-webkit-scrollbar {
+  height: 2px;              /* <-- make it thinner (try 2–6px) */
+  width: 2px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #9ca3af;      /* gray-400 */
+  border-radius: 9999px;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;      /* gray-500 */
+}
+
+
+
+
+@keyframes gradientShift {
+    0% { 
+        background-position: 0% 50%; 
+    }
+    50% { 
+        background-position: 100% 50%; 
+    }
+    100% { 
+        background-position: 0% 50%; 
+    }
+}
+
+/* Animated mint background class for Tailwind */
+.mint-animated-bg {
+    background: linear-gradient(180deg, 
+        #ffffff 0%, 
+        #8bff8b 25%, 
+        #fbfffb 50%, 
+        #a3ffa3 75%, 
+        #ffffff 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+
+
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%); /* Adjust for speed & loop */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite; /* Adjust duration for speed */
+}
+.brands-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+
+
+@keyframes popup_form {
+  0% {
+    transform: translateY(-50%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.animation_form_popup {
+  animation: popup_form 0.5s ease-out forwards;
+}
+
+
+/* Hide the actual Google Translate bar */
+#goog-gt-tt, .goog-te-balloon-frame, div#goog-gt- {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide the banner that shows "Translated to: Khmer" */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Hide all Google Translate UI elements */
+.goog-te-banner-frame, 
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Force hide the top bar */
+body > .skiptranslate:first-child {
+  display: none !important;
+}

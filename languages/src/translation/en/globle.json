@@ -1,0 +1,8 @@
+{
+    "header" : {
+        "message" :"welcome to pet store deluxe"
+    },
+    "home" : {
+        "body" : "A store designed for all your pet needs"
+    }
+}

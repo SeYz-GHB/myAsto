@@ -1,0 +1,47 @@
+import React from 'react'
+import asto_facebook_qr from '../../../assets/qrcode/asto_facebook_qr.jpg'
+import asto_telegram_qr from '../../../assets/qrcode/asto_telegram_qr.jpg'
+import asto_tiktok_qr from '../../../assets/qrcode/asto_tiktok_qr.jpg'
+
+const ReciptHeader = ({asto_logo = false}) => {
+    const shape = "w-12 h-12 xs:w-12 xs:h-12 sm:w-16 sm:h-16 md:w-25 md:h-25 object-contain";
+
+  return (
+    <div className="w-full border-b-1">
+      <div className="flex justify-between items-start gap-2 sm:gap-4">
+        {/* Logo Section */}
+        <div className="flex-shrink-0">
+          {asto_logo && (
+            <img 
+              src={asto_logo} 
+              alt="Asto Logo" 
+              className="w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 md:w-30 md:h-30 object-contain"
+            />
+          )}
+        </div>
+
+        {/* QR Codes Section */}
+        <div className="flex gap-1 xs:gap-2 sm:gap-3 md:gap-4 lg:gap-6 flex-shrink-0">
+          <img 
+            src={asto_facebook_qr} 
+            alt="Facebook QR Code" 
+            className={`${shape}`}
+          />
+          <img 
+            src={asto_tiktok_qr} 
+            alt="TikTok QR Code" 
+            className={`${shape}`}
+          />
+          <img 
+            src={asto_telegram_qr} 
+            alt="Telegram QR Code" 
+            className={`${shape}`}
+          />
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default ReciptHeader
